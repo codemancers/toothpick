@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require 'toothpick'
+require 'toothpick/errors'
+
+class ToothpickRunner < Thor
+  include Toothpick
+
+  default_task :help
+
+  desc "init PICKS_GIT_REPO", "Clones PICKS_GIT_REPO"
+  def init(picks_repo)
+    Commands::init(picks_repo)
+    say("Initialized toothpick", :green)
+  rescue Errors::ToothpickError => e
+    say "Error: #{e.message}", :red
+  end
+
+  desc "new", "Creates a new pick"
+  def new
+    Commands::new_pick
+    say("New pick added", :green)
+  rescue Errors::ToothpickError => e
+    say "Error: #{e.message}", :red
+  end
+
+  desc "search STRING", "Searches for STRING and opens files in your $EDITOR"
+  def search(string)
+    Commands::search(string)
+  rescue Errors::ToothpickError => e
+    say "Error: #{e.message}", :red
+  end
+
+
+end
+
+ToothpickRunner.start
