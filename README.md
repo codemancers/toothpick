@@ -1,7 +1,4 @@
-# Toothpick
-![toothpick](http://i39.tinypic.com/2vw7erb.png)
-
-For the art of picking.
+![toothpick](http://i39.tinypic.com/2vw7erb.png) *For the fine art of picking*
 
 ## Installation
 
