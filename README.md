@@ -7,7 +7,7 @@
 ## Usage
 
     #Setup toothpick
-    toothpick init
+    toothpick init git@github.com:code-mancers/picks.git
 
     #Open today's pick file for editing
     toothpick new
