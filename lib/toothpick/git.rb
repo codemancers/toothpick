@@ -22,7 +22,11 @@ module Toothpick
     def commit
       system("cd #{git_dir} "\
         "&& git add --all "\
-        "&& git commit --allow-empty-message -m ''")
+        "&& git commit -m '#{make_commit_message}'")
+    end
+
+    def make_commit_message
+      "Added pick by #{ENV['USER']} on #{Time.now}"
     end
 
     def push
