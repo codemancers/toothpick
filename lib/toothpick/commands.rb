@@ -7,7 +7,7 @@ module Toothpick
   module Commands
 
     TOOTHPICK_HOME  = ENV['HOME'] + "/.toothpick"
-    PICK_FILENAME   = Date.today.strftime + ".md"
+    PICK_FILENAME   = Time.now.utc.to_date.strftime + ".md"
 
     def self.init(picks_repo)
       Git.clone_repo(picks_repo, TOOTHPICK_HOME)
