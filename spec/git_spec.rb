@@ -43,7 +43,7 @@ describe Toothpick::Git do
 
     describe "#commit" do
       let(:expected_git_command) do
-        "cd /home/emil && git add --all && git commit --allow-empty-message -m ''"
+        %r{cd /home/emil && git add --all && git commit}
       end
       it "should git add and commit without commit message" do
         git.commit
