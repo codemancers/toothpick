@@ -1,5 +1,8 @@
 ![toothpick](http://i39.tinypic.com/2vw7erb.png) *For the fine art of picking*
 
+[![Build Status](https://travis-ci.org/code-mancers/toothpick.png?branch=master)](https://travis-ci.org/code-mancers/toothpick)
+
+
 ## Installation
 
     $ gem install toothpick
